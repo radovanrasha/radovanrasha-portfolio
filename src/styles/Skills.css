@@ -1,0 +1,61 @@
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em 8em 2em 8em;
+}
+
+.skill {
+  animation-name: slideInFromDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-image {
+  width: 100px;
+  margin-bottom: 1em;
+  max-width: 100%;
+  height: auto;
+}
+
+.skill-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-container {
+    padding: 1em;
+  }
+
+  .skill {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+}
+
+.skill-name {
+  display: block;
+  position: relative;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+.percentage-bar {
+  display: block;
+  height: 2px;
+  width: 100%;
+}
