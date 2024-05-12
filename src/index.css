@@ -2,6 +2,7 @@
 :root {
   --bg-color: rgba(243, 242, 239, 0.5);
   --bg-cont-color: rgba(243, 242, 239, 0.5);
+  --dark-color: #21252b;
   --text-color: #21252b;
 }
 
@@ -11,6 +12,7 @@
   --bg-cont-color: rgba(33, 37, 43, 0.5);
   --text-color: #ffffff;
   --text-color-second: #21252b;
+  --dark-color: #21252b;
 }
 
 * {

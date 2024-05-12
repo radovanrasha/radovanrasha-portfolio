@@ -37,7 +37,7 @@ const Courses = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>The Complete Node.js Developer Course</h2>
+              <h2 class="profile-bio">The Complete Node.js Developer Course</h2>
               <div class="profile-bio">
                 In Andrew Mead's 35-hour course, I studied Node.js and its
                 framework, Express.js. I became proficient in using npm for
@@ -82,7 +82,7 @@ const Courses = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>The Complete React Developer Course</h2>
+              <h2 class="profile-bio">The Complete React Developer Course</h2>
               <div class="profile-bio">
                 In Andrew Mead's 39-hour course, I studied React and it's main
                 Hooks. I learned about React Router, props and authentication. I
@@ -120,7 +120,9 @@ const Courses = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>MongoDB - The Complete Developer's Guide 2023</h2>
+              <h2 class="profile-bio">
+                MongoDB - The Complete Developer's Guide 2023
+              </h2>
               <div class="profile-bio">
                 In Maximilian Schwarzmüller's 17.5-hour course I learned all
                 about MongoDB. Learned about basic CRUD operations, schemas &

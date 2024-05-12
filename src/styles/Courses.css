@@ -92,8 +92,13 @@ body {
   transition: all 0.9s;
 }
 
+.profile-bio {
+  color: var(--text-color);
+}
+
 .profile:hover .profile-bio {
   opacity: 0.9;
+  color: var(--dark-color);
 }
 
 .social-icons {

@@ -46,8 +46,10 @@ const Competitions = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>BizKod v7.0 Hakaton - Third place</h2>
-              <h3 style={{ marginBottom: "5px" }}>18.03.2023. - 19.03.2023.</h3>
+              <h2 class="profile-bio">BizKod v7.0 Hakaton - Third place</h2>
+              <h3 class="profile-bio" style={{ marginBottom: "5px" }}>
+                18.03.2023. - 19.03.2023.
+              </h3>
               <div class="profile-bio">
                 In Subotica, Inspira Grupa hosted an engaging student
                 competition, challenging teams to innovate within 24 hours. With

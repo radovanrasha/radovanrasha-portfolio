@@ -49,11 +49,13 @@ const Experience = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>Concordsoft Solutions</h2>
-              <h3 style={{ marginBottom: "5px" }}>15.07.2022. - Present</h3>
+              <h2 class="profile-bio">Concordsoft Solutions</h2>
+              <h3 class="profile-bio" style={{ marginBottom: "5px" }}>
+                15.07.2022. - Present
+              </h3>
               <div class="profile-bio">
                 At my first company, I gained valuable knowledge in Node.js,
-                React, and MongoDB, and learned the basics of Redux, SQL, and
+                React, and MongoDB, and learned the basics of SQL, and Linux VPS
                 servers. I managed 7 real projects, improved my skills in Trello
                 and Jira, and acquired insights into project planning as a
                 Project Manager.

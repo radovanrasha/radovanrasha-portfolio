@@ -43,7 +43,7 @@ const Projects = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>Weather website</h2>
+              <h2 class="profile-bio">Weather website</h2>
               <div class="profile-bio">
                 This is website that I made using React and two free APIs.
               </div>
@@ -81,7 +81,7 @@ const Projects = () => {
               </li>
             </ul>
             <div class="profile-name">
-              <h2>Notes website</h2>
+              <h2 class="profile-bio">Notes website</h2>
               <div class="profile-bio">
                 This is fullstack project that I made using Node.js, Express.js,
                 MongoDB, React and ANT Design.
