@@ -3,5 +3,7 @@ package-lock.json
 
 .env
 
+*.pem
+
 deploy.sh
 server_deploy.sh
