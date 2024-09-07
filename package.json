@@ -17,7 +17,7 @@
     "start": "react-scripts start",
     "start:prod": "npm run build && serve -s build",
     "build": "react-scripts build",
-    "deploy": "pm2 deploy exosystem.config.js production"
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "eslintConfig": {
     "extends": [
