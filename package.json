@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:prod": "serve -s build",
+    "start:prod": "serve -s build -l 3001",
     "build": "react-scripts build",
     "deploy": "pm2 deploy ecosystem.config.js production"
   },
