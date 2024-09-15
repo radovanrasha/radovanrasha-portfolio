@@ -17,7 +17,7 @@ function App() {
         <NavBar></NavBar>
         <div>
           <Routes>
-            <Route path="/" element={<Experience></Experience>}></Route>
+            <Route path="/" element={<Projects></Projects>}></Route>
             <Route path="/projects" element={<Projects></Projects>}></Route>
             <Route path="/courses" element={<Courses></Courses>}></Route>
             <Route
@@ -30,7 +30,7 @@ function App() {
             ></Route>
             <Route path="/about" element={<About></About>}></Route>
             <Route path="/skills" element={<Skills></Skills>}></Route>
-            <Route path="/*" element={<Skills></Skills>}></Route>
+            <Route path="/*" element={<Projects></Projects>}></Route>
           </Routes>
           <Footer></Footer>
         </div>

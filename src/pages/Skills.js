@@ -11,63 +11,58 @@ import jsskill from "../assets/jsskill.png";
 import cssskill from "../assets/cssskill.png";
 import htmlskill from "../assets/htmlskill.png";
 import psskill from "../assets/psskill.png";
+import vpsskill from "../assets/vpsskill.png";
 
 const Skills = () => {
   const skills = [
     {
       name: "Node.js",
       logo: nodejsskill,
-      percentage: 85,
     },
     {
       name: "Express.js",
       logo: expressskill,
-      percentage: 90,
     },
     {
       name: "MongoDB",
       logo: mongodbskill,
-      percentage: 90,
     },
     {
       name: "React",
       logo: reactskill,
-      percentage: 70,
+    },
+    {
+      name: "VPS Linux servers",
+      logo: vpsskill,
     },
     {
       name: "ANT Design",
       logo: antskill,
-      percentage: 90,
     },
     {
       name: "HTML",
       logo: htmlskill,
-      percentage: 100,
     },
     {
       name: "CSS",
       logo: cssskill,
-      percentage: 100,
     },
     {
       name: "JavaScript",
       logo: jsskill,
-      percentage: 90,
     },
     {
       name: "SQL",
       logo: sqlskill,
-      percentage: 50,
     },
     {
       name: "GitHub & Bitbucket",
       logo: gitskill,
-      percentage: 80,
     },
+
     {
       name: "Adobe Photoshop",
       logo: psskill,
-      percentage: 60,
     },
   ];
 
@@ -84,12 +79,6 @@ const Skills = () => {
             <img src={skill.logo} alt={skill.name} className="skill-image" />
             <div className="skill-label">
               <span className="skill-name">{skill.name}</span>
-              <div
-                className="percentage-bar"
-                style={{
-                  background: `linear-gradient(to right, rgb(7, 9, 114) 0%, rgb(7, 9, 114) ${skill.percentage}%, #e0e0e0 ${skill.percentage}%, #e0e0e0 100%)`,
-                }}
-              ></div>
             </div>
           </div>
         ))}
