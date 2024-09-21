@@ -52,9 +52,9 @@ const Projects = () => {
               <div class="profile-name">
                 <h2 class="profile-bio">Playground website</h2>
                 <div class="profile-bio">
-                  This is fullstack project that I made using Node.js,
-                  Express.js, MongoDB, React, ANT Design and SocketIO. It is
-                  play for offline and online games.
+                  This is a full-stack project that I built using Node.js,
+                  Express.js, MongoDB, React, Ant Design, and Socket.IO. It's a
+                  website for both offline and online games.
                 </div>
               </div>
             </div>
