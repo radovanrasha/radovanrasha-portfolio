@@ -12,7 +12,7 @@ const About = () => {
         <img
           className="leftslide"
           style={{ animationDelay: `${1 * 0.3}s` }}
-          src={about1}
+          src={about2}
           alt="Profile"
         />
         <div class="text-content">
@@ -39,7 +39,7 @@ const About = () => {
         <img
           className="rightslide"
           style={{ animationDelay: `${2 * 0.3}s` }}
-          src={about2}
+          src={about1}
           alt="Profile"
         />
       </div>
