@@ -1,55 +1,55 @@
 .skills-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 2em 8em 2em 8em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .skill {
-  animation-name: slideInFromDown;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  background: #fff;
-  border: 1px solid #ddd;
-  margin: 1em;
-  padding: 1em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  width: 200px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .skill-image {
-  width: 100px;
-  margin-bottom: 1em;
-  max-width: 100%;
-  height: auto;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
 }
 
-.skill-label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-}
-
-@media only screen and (max-width: 600px) {
-  .skills-container {
-    padding: 1em;
-  }
-
-  .skill {
-    width: 100%;
-    margin: 0.5em 0;
-  }
+.skill:hover .skill-image {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .skill-name {
-  display: block;
-  position: relative;
-  padding-bottom: 0.5em;
-  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+  }
 }

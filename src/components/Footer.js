@@ -4,23 +4,20 @@ import github from "../assets/github.png";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <p> &copy; 2023 radovanrasha</p>
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} radovanrasha</p>
       <div>
-        <a href="mailto:ivanovicradovan18@gmail.com" target="_blank">
-          <img className="footerIcon" src={gmail} alt="Profile" />
+        <a href="mailto:ivanovicradovan18@gmail.com" target="_blank" rel="noreferrer">
+          <img className="footerIcon" src={gmail} alt="Gmail" />
         </a>
-        <a href="https://www.linkedin.com/in/radovanrasha/" target="_blank">
-          <img className="footerIcon" src={linkedin} alt="Profile" />
+        <a href="https://www.linkedin.com/in/radovanrasha/" target="_blank" rel="noreferrer">
+          <img className="footerIcon" src={linkedin} alt="LinkedIn" />
         </a>
-
-        <a href="https://www.github.com/radovanrasha/" target="_blank">
-          <img className="footerIcon" src={github} alt="Profile" />
+        <a href="https://www.github.com/radovanrasha/" target="_blank" rel="noreferrer">
+          <img className="footerIcon" src={github} alt="GitHub" />
         </a>
       </div>
-
-      <br />
-    </div>
+    </footer>
   );
 };
 

@@ -1,65 +1,76 @@
 .about-container {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin: 0;
-  width: 100%;
-  padding: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  gap: 4rem;
+  padding: 2rem 0;
 }
 
 .about-row {
-  margin: 40px 0 0 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
 }
 
 .about-row img {
-  width: 30%;
-  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--glass-border);
 }
 
-.about-row div {
-  width: 45%;
-  font-size: 24px;
+.text-content {
+  padding: 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .leftslide {
-  animation-name: slideInFromLeft;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  animation: slideInLeft 0.8s ease-out forwards;
 }
 
 .rightslide {
-  animation-name: slideInFromRight;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  animation: slideInRight 0.8s ease-out forwards;
 }
 
 @media (max-width: 900px) {
   .about-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .about-row div {
-    width: 80%;
+  
+  .about-row:nth-child(even) .text-content {
+    order: 1;
   }
-  .about-row div p {
-    margin: 15px 0 15px 0 !important;
+  
+  .about-row:nth-child(even) img {
+    order: 2;
   }
-  .about-row img {
-    width: 80%;
-  }
-  .about-row:nth-of-type(2) {
-    flex-direction: column-reverse !important;
-  }
-  .about-row:nth-of-type(4) {
-    flex-direction: column-reverse !important;
+  
+  .text-content {
+    padding: 1.5rem;
   }
 }

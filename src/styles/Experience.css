@@ -1,70 +1,92 @@
-@keyframes slideInFromDown {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .onecard-profile-wrapper {
-  width: 80%;
-  height: 700px;
-  position: relative;
-  margin: 15px 0 15px 0;
-  animation-name: slideInFromRight;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  max-width: 800px;
+  margin: 2rem auto;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
 }
 
-@media (min-width: 600px) {
-  .onecard-profile-wrapper {
-    width: 60%;
-    margin: 15px 40px 15px 40px;
+.experience-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.experience-logo-container {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 24px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.experience-logo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.experience-info h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.experience-date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.experience-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  background: var(--glass-border);
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.experience-link:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .experience-card {
+    padding: 2rem 1.5rem;
   }
-}
-
-@media (min-width: 900px) {
-  .onecard-profile-wrapper {
-    width: 50%;
-    margin: 15px 40px 15px 40px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .onecard-profile-wrapper {
-    width: 40%;
-    margin: 15px 40px 15px 40px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .onecard-profile-wrapper {
-    width: 29%;
-    margin: 15px 40px 15px 40px;
+  
+  .experience-logo-container {
+    width: 100px;
+    height: 100px;
   }
 }

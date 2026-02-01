@@ -4,6 +4,6 @@ package-lock.json
 .env
 
 *.pem
-
+build/
 deploy.sh
 server_deploy.sh

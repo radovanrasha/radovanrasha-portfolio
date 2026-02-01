@@ -1,11 +1,10 @@
-import logo from "../snowy.png";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import React, { useState, useContext } from "react"; // Import useState
 import { ThemeContext } from "../ThemeContext";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
 
-export default function () {
+export default function NavBar() {
   const [menuActive, setMenuActive] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
 
@@ -15,46 +14,32 @@ export default function () {
 
   return (
     <div className="top-header">
-      <nav className="nav">
-        <div className="hamburger" onClick={() => setMenuActive(!menuActive)}>
-          <span></span>
-          <span></span>
-          <span></span>
+      <div className="nav-container">
+        <nav className="nav">
+          <div className="hamburger" onClick={() => setMenuActive(!menuActive)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul className={menuActive ? "active" : ""}>
+            <CustomLink setMenuActive={setMenuActive} to="/projects">projects</CustomLink>
+            <CustomLink setMenuActive={setMenuActive} to="/experience">experience</CustomLink>
+            <CustomLink setMenuActive={setMenuActive} to="/courses">courses</CustomLink>
+            <CustomLink setMenuActive={setMenuActive} to="/competitions">competitions</CustomLink>
+            <CustomLink setMenuActive={setMenuActive} to="/skills">skills</CustomLink>
+            <CustomLink setMenuActive={setMenuActive} to="/about">about me</CustomLink>
+          </ul>
+        </nav>
+        <div className="nav-actions">
+          <button className="toggleThemeButton" onClick={toggleTheme} aria-label="Toggle Theme">
+            {theme === "light" ? (
+              <img className="toggleThemeIcon" src={moon} alt="Moon icon" />
+            ) : (
+              <img className="toggleThemeIcon" src={sun} alt="Sun icon" />
+            )}
+          </button>
         </div>
-        <ul className={menuActive ? "active" : ""}>
-          <CustomLink setMenuActive={setMenuActive} to="/experience">
-            {" "}
-            &lt;experience/&gt;{" "}
-          </CustomLink>
-          <CustomLink setMenuActive={setMenuActive} to="/courses">
-            {" "}
-            &lt;courses/&gt;{" "}
-          </CustomLink>
-          <CustomLink setMenuActive={setMenuActive} to="/competitions">
-            {" "}
-            &lt;competitions/&gt;{" "}
-          </CustomLink>
-          <CustomLink setMenuActive={setMenuActive} to="/skills">
-            {" "}
-            &lt;skills/&gt;{" "}
-          </CustomLink>
-          <CustomLink setMenuActive={setMenuActive} to="/projects">
-            {" "}
-            &lt;projects/&gt;{" "}
-          </CustomLink>
-          <CustomLink setMenuActive={setMenuActive} to="/about">
-            {" "}
-            &lt;about me/&gt;{" "}
-          </CustomLink>
-        </ul>
-      </nav>
-      <button className="toggleThemeButton" onClick={toggleTheme}>
-        {theme === "light" ? (
-          <img className="toggleThemeIcon" src={moon} alt="Profile" />
-        ) : (
-          <img className="toggleThemeIcon" src={sun} alt="Profile" />
-        )}
-      </button>
+      </div>
     </div>
   );
 }

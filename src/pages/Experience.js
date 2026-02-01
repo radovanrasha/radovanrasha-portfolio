@@ -1,66 +1,46 @@
-import React from "react";
-// import "../styles/Experience.css";
+import "../styles/Experience.css";
 import concordlogo from "../assets/concordlogo.png";
 
 const Experience = () => {
   return (
-    <div className="container">
-      <p className="header-div"> &lt;Experience/&gt;</p>
-      <div class="container">
-        <div class="onecard-profile-wrapper">
-          <div class="profile">
-            <div class="profile-image">
-              <img src={concordlogo} alt="Profile" />
+    <div className="container animate-in">
+      <div className="onecard-profile-wrapper">
+        <div className="experience-card">
+          <div className="experience-logo-container">
+            <img src={concordlogo} alt="Concordsoft Solutions Logo" />
+          </div>
+          <div className="experience-info">
+            <h2>Concordsoft Solutions</h2>
+            <span className="experience-date">July 2022 - Present</span>
+            <div className="experience-description">
+              At my first company, I gained deep expertise in the JavaScript ecosystem, 
+              focusing on Node.js, React, and MongoDB. I successfully managed and 
+              delivered 7 real-world projects, honing my skills in project planning, 
+              team collaboration (Trello/Jira), and infrastructure management including 
+              SQL and Linux VPS servers.
             </div>
-            <ul class="social-icons">
-              <li>
-                <a
-                  href="https://www.helloworld.rs/kompanija/ConcordSoft-Solutions/1822"
-                  title="Concord"
-                >
-                  <svg
-                    style={{ color: "black" }}
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect
-                      x="4"
-                      y="8"
-                      width="16"
-                      height="12"
-                      rx="2"
-                      ry="2"
-                    ></rect>
-
-                    <path d="M4 8L12 4L20 8"></path>
-
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-
-                    <line x1="7" y1="10" x2="7" y2="8"></line>
-                    <line x1="17" y1="10" x2="17" y2="8"></line>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            <div class="profile-name">
-              <h2 class="profile-bio">Concordsoft Solutions</h2>
-              <h3 class="profile-bio" style={{ marginBottom: "5px" }}>
-                15.07.2022. - Present
-              </h3>
-              <div class="profile-bio">
-                At my first company, I gained valuable knowledge in Node.js,
-                React, and MongoDB, and learned the basics of SQL, and Linux VPS
-                servers. I managed 7 real projects, improved my skills in Trello
-                and Jira, and acquired insights into project planning as a
-                Project Manager.
-              </div>
-            </div>
+            <a
+              href="https://www.helloworld.rs/kompanija/ConcordSoft-Solutions/1822"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="experience-link"
+            >
+              Learn more about Concordsoft
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
