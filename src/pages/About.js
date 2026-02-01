@@ -4,15 +4,7 @@ import about2 from "../assets/about2.jpg";
 import about3 from "../assets/about3.jpg";
 import about4 from "../assets/about4.jpg";
 
-import { useEffect } from "react";
-
 const About = () => {
-  useEffect(() => {
-    document.body.style.overflow = "auto";
-    return () => {
-      document.body.style.overflow = "hidden";
-    };
-  }, []);
   return (
     <div className="container animate-in">
       <div className="about-container">

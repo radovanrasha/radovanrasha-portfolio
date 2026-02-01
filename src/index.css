@@ -41,7 +41,6 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
-  overflow: hidden;
 }
 
 .glass-card {
@@ -245,6 +244,10 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
+  body {
+    overflow-y: auto;
+  }
+
   .container {
     margin: 90px auto 110px;
     padding: 0 1.5rem;
